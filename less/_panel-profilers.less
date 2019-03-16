@@ -1,0 +1,46 @@
+// Retainers resizer bar in heap snapshot
+.heap-snapshot-view .heap-snapshot-view-resizer {
+	background-color: @global-toolbar !important;
+	border-top: 1px solid @global-divider !important;
+	border-bottom: 1px solid @global-divider !important;
+	color: @global-text;
+}
+
+// Heap snapshot table text
+#profile-views .data-container .object-column {
+	color: @global-text;
+
+	button {
+		.button-styles();
+	}
+}
+
+.heap-snapshot-view tr:not(.selected) td.object-column span.highlight {
+	background-color: @selection-background !important;
+	border-radius: 3px;
+}
+
+.profile-sidebar-tree-item,
+.profile-launcher-view-tree-item,
+.heap-snapshot-sidebar-tree-item {
+	color: @global-text !important;
+}
+
+.source-code.event-properties .name {
+	color: @js-obj-name !important;
+}
+
+.profile-launcher-target-list {
+	border: 1px solid @global-divider !important;
+}
+
+.profile-isolate-item {
+	&:hover {
+		.highlight(hover)
+	}
+
+	&.selected {
+		border-color: transparent !important;
+		.highlight(selection)
+	}
+}

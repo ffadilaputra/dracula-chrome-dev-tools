@@ -1,0 +1,262 @@
+.settings-window-main {
+	background-color: @global-background !important;
+
+	header {
+		border-bottom: 1px solid @global-divider !important;
+	}
+
+	.settings-experiment-hidden label {
+		background-color: @global-background !important;
+	}
+}
+
+:host-context(.settings-experiment-hidden) {
+	label {
+		color: @global-accent !important;
+	}
+}
+
+.settings-window-title,
+.settings-tab-container {
+	color: @global-text !important;
+}
+
+.settings-tab-container header {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+.help-section-title {
+	color: @global-text !important;
+}
+
+:host-context(.settings-window-main) {
+	.header {
+		border-bottom: 1px solid @global-divider;
+	}
+
+	.tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab:not(.selected) {
+		border-top: none !important;
+		padding-left: 16px !important;
+	}
+
+	.tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab.selected {
+		border-top: none !important;
+		border-left: 6px solid @global-accent !important;
+	}
+
+	.tabbed-pane-header {
+		background-color: @global-background !important;
+		background-image: none !important;
+		box-shadow: none !important;
+		margin-top: -10px !important;
+		padding-top: 18px !important;
+	}
+
+	.tabbed-pane-header-contents {
+		box-shadow: none !important;
+	}
+
+	.tabbed-pane-content {
+		color: @global-text !important;
+		margin-left: 20px;
+	}
+}
+
+// ==========================================================================
+// Devices List
+// ==========================================================================
+
+.devices-list {
+	border: none !important;
+}
+
+:host(.devices-list) {
+	.devices-title {
+		color: @global-accent !important;
+	}
+
+	.list {
+		border: 1px solid @global-divider !important;
+	}
+
+	.list-item:not(.label):not(.breakpoint-hit),
+	.list-item:not(.label):not(.breakpoint-hit):hover {
+		border-top: 0 !important;
+		border-bottom: 0 !important;
+	}
+
+	input[type="text"] {
+		.input-styles();
+	}
+
+	.controls-gradient {
+		display: none;
+	}
+
+	.controls-buttons {
+		background-color: transparent !important;
+	}
+
+	.devices-list-item {
+		color: @global-text;
+		border-top: 1px solid transparent !important;
+		border-bottom: 1px solid  transparent !important;
+
+		&:hover {
+			background: @hover-background !important;
+			border-top: 1px solid @hover-border !important;
+			border-bottom: 1px solid  @hover-border !important;
+		}
+
+		.devices-list-title {
+			opacity: 0.5 !important;
+			color: @global-text !important;
+		}
+
+		.devices-list-checkbox:checked + .devices-list-title {
+			opacity: 1 !important;
+		}
+	}
+
+	.editor-container {
+		background: @- !important; .contrast(@global-background, 5%);
+	}
+
+	.list-separator {
+		& { border-top: 1px solid @- !important; .contrast(@global-background, 5%, invert) }
+		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%); }
+	}
+
+	.devices-list-edit,
+	.devices-list-remove {
+		.glyphs("Images/toolbarButtonGlyphs");
+
+		background-color: @global-accent !important;
+		background-image: none !important;
+	}
+
+	.devices-list-edit {
+		-webkit-mask-position: -224px -72px;
+	}
+
+	.devices-list-remove {
+		-webkit-mask-position: -128px -24px;
+	}
+}
+
+// ==========================================================================
+// Blackboxing
+// ==========================================================================
+
+:host(.blackbox-list) {
+	.list {
+		border: 1px solid @global-divider !important;
+	}
+
+	.list-item:not(.label):not(.breakpoint-hit),
+	.list-item:not(.label):not(.breakpoint-hit):hover {
+		border-top: 0 !important;
+		border-bottom: 0 !important;
+	}
+
+	.list-item:hover .controls-buttons {
+		background-color: @hover-background !important;
+	}
+
+	.blackbox-separator {
+		background-color: @global-divider !important;
+	}
+
+	.blackbox-pattern {
+		color: @global-text !important;
+	}
+
+	.controls-gradient {
+		display: none;
+	}
+
+	.editor-container {
+		background: @- !important; .contrast(@global-background, 5%);
+
+		input {
+			.input-styles();
+		}
+	}
+}
+
+// ==========================================================================
+// Workspace
+// ==========================================================================
+:host(.file-system-list) {
+	.list {
+		border: 1px solid @global-divider !important;
+	}
+
+	.list-item:hover .controls-buttons {
+		background-color: @hover-background !important;
+	}
+
+	.controls-gradient {
+		display: none;
+	}
+
+	.editor-container {
+		background: @- !important; .contrast(@global-background, 5%);
+
+		input {
+			.input-styles();
+		}
+	}
+}
+
+.settings-window-main {
+	.folder-exclude-pattern input {
+		.input-styles();
+	}
+
+	.settings-info-message {
+		background: @- !important; .contrast(@global-background, 5%);
+		color: @global-text !important;
+	}
+
+	.settings-tab .file-system-container {
+		border-top: 1px solid @global-divider !important;
+	}
+}
+
+// ==========================================================================
+// Network Conditions
+// ==========================================================================
+:host(.conditions-list) {
+	.list {
+		border: 1px solid @global-divider !important;
+	}
+
+	.list-item:not(.label) {
+		border-top: 0 !important;
+	}
+
+	.list-item:hover .controls-buttons {
+		background-color: @hover-background !important;
+	}
+
+	.conditions-list-separator {
+		background-color: @global-divider !important;
+	}
+
+	.controls-gradient {
+		display: none;
+	}
+
+	.editor-container {
+		background: @- !important; .contrast(@global-background, 5%);
+
+		input {
+			.input-styles();
+		}
+	}
+
+	.conditions-list-text {
+		color: @global-text !important;
+	}
+}

@@ -1,0 +1,220 @@
+// GLOBAL BACKGROUND COLOR
+.panel.elements, // elements-panel
+.styles-pane, // elements-sidebar
+.metrics,
+#console-messages,
+.tabbed-pane-content, // sources
+.panel-enabler-view {
+	background-color: @global-background !important;
+}
+
+.CodeMirror .CodeMirror-selected,
+.CodeMirror-focused .CodeMirror-selected,
+:focus.selected {
+	background-color: @global-selected !important;
+
+	.inactive & {
+		background-color: @global-selected !important;
+	}
+}
+
+.tabbed-pane .CodeMirror-focused .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight),
+.CodeMirror-focused .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight),
+div.CodeMirror .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight) {
+	color: @global-text !important;
+}
+
+.CodeMirror .CodeMirror-line::selection,
+.CodeMirror .CodeMirror-line > span::selection,
+.CodeMirror .CodeMirror-line > span > span::selection {
+	background: @global-selected !important;
+	color: unset !important;
+}
+
+::selection {
+	background: lighten(@global-selected, 45%) !important;
+}
+
+[class*="platform-"] {
+	color: @global-text !important;
+}
+
+.status-bar {
+	border-bottom: 1px solid @tab-color-top;
+}
+
+.status-bar-text {
+	color: @global-text !important;
+}
+
+// Editing Dom Nodes or Snippet Filenames
+style + .text-prompt-editing,
+.text-prompt-editing,
+.editing {
+	box-shadow: none !important;
+	background-color: @global-background !important;
+	outline: 1px solid @eh-editing-outline !important;
+	color: @global-text !important;
+}
+
+// Delete if/when https://bugs.chromium.org/p/chromium/issues/detail?id=875668
+div.editing,
+div.editing *,
+span.editing,
+span.editing * {
+	color: @global-text !important;
+}
+
+// Weird edit state where you add an attribute, but delete the text and retype
+.being-edited.editing font {
+	color: @global-text !important;
+}
+
+.elements-tree-editor {
+	box-shadow: none !important;
+}
+
+.soft-context-menu {
+	background: @popover-background !important;
+	border: 1px solid @- !important; .contrast(@popover-background, 5%);
+	color: @global-text !important;
+	box-shadow: 0 5px 10px fade(#000, 40%) !important;
+
+	.soft-context-menu-item-mouse-over {
+		& { background-color: @- !important; .contrast(@popover-background, 8%); }
+		& { border-top: 1px solid @- !important; .contrast(@popover-background, 10%); }
+		& { border-bottom: 1px solid @- !important; .contrast(@popover-background, 10%); }
+		background-image: none !important;
+		color: @global-text !important;
+	}
+
+	.soft-context-menu-separator > .separator-line {
+		border-bottom: 1px solid @- !important; .contrast(@popover-background, 5%);
+	}
+
+	// Dock options (remove blue hover)
+	.toolbar .toolbar-shadow.blue-on-hover .toolbar-item:not(.toggled-on).hover:enabled {
+		background-color: @global-hover !important;
+
+		.glyph {
+			color: @global-text !important;
+		}
+	}
+}
+
+// Console context dropdown
+.console-context {
+	background-color: transparent !important;
+
+	&.warning .title {
+		color: @global-warn !important;
+	}
+}
+
+.widget .context-list {
+	background: @popover-background !important;
+	border: 1px solid @- !important; .contrast(@popover-background, 5%);
+	color: @global-text !important;
+	box-shadow: 0 5px 10px fade(#000, 40%) !important;
+
+	.context.selected {
+		& { background-color: @- !important; .contrast(@popover-background, 8%); }
+		& { border-top: 1px solid @- !important; .contrast(@popover-background, 10%); }
+		& { border-bottom: 1px solid @- !important; .contrast(@popover-background, 10%); }
+
+		.title {
+			color: @global-text !important;
+		}
+
+		.subtitle {
+			color: @global-label !important;
+		}
+	}
+}
+
+// Tooltips
+.tooltip {
+	background: @- !important; .contrast(@global-background, 3%);
+	border: 1px solid @global-background;
+	color: @global-text !important;
+
+	&-shortcut {
+		color: @global-accent !important;
+	}
+}
+
+// Buttons
+.text-button,
+[is="text-button"] {
+	.button-styles();
+}
+
+ol.children.shadow-root.expanded {
+	border-left: 1px dashed @- !important; .contrast(@global-background, 10%);
+}
+
+// ==========================================================================
+// Forms
+// ==========================================================================
+input.toolbar-item {
+	.input-styles()
+}
+
+label[is="dt-radio"] ::content .dt-radio-button:checked {
+	border: 0 !important;
+	background: url("Images/radioDot.png") center center no-repeat @global-accent !important;
+}
+
+// ==========================================================================
+// Form Elements
+// ==========================================================================
+.dt-checkbox-text {
+	color: @global-text !important;
+}
+
+.chrome-select {
+	.input-styles();
+	background-image: none !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	padding-right: 0;
+}
+
+// ==========================================================================
+// Tables
+// ==========================================================================
+
+.data-grid th {
+	border: none !important;
+}
+
+.data-grid-data-grid-node {
+	color: @global-text !important;
+}
+
+.panel {
+	background-color: @global-background !important;
+}
+
+// item selection
+ol:focus li.selected .selection,
+li.selected .selection {
+	outline: 1px solid @eh-highlight-outline !important;
+	background-color: @eh-highlight-background !important;
+}
+
+// Navigation
+.tree-outline li.profiles-tree-section {
+	text-shadow: none !important;
+}
+
+.navigator-fs-tree-item:not(.has-mapped-files),
+.navigator-fs-folder-tree-item:not(.has-mapped-files) {
+	filter: none !important;
+	opacity: 1 !important;
+
+	.tree-element-title,
+	.icons-container {
+		opacity: 0.5 !important;
+	}
+}

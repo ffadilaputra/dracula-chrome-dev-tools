@@ -1,0 +1,370 @@
+// Styles
+// ==========================================================================
+.styles-section {
+	padding: 4px 0 !important;
+	margin: 0 10px;
+	border-bottom: 0 !important;
+	color: @global-text !important;
+
+	+ .styles-section {
+		border-top: 1px solid @style-separator !important;
+	}
+
+	&[data-keyboard-focus]:focus {
+		background-color: transparent !important;
+	}
+
+	// Elements CSS Sidebar Readonly
+	&.read-only:not(.computed-style) {
+		background-color: @global-background !important;
+		margin: 0;
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+}
+
+:host-context(.styles-section) {
+	.overloaded,
+	.inactive,
+	.disabled,
+	.not-parsed-ok {
+		opacity: 0.5 !important;
+	}
+}
+
+// Style hover toolbar
+.sidebar-pane-section-toolbar {
+	background-color: @style-toolbar-background !important;
+}
+
+// Styles Filter Bar
+.styles-sidebar-pane-toolbar-container {
+	background-color: @toolbar-sub !important;
+	color: @global-text !important;
+}
+
+// CSS property icons in style declarations
+.bezier-swatch-icon:hover,
+.shadow-swatch-icon:hover {
+	background-color: @glyph-active !important;
+}
+
+.styles-sidebar-pane-toolbar {
+	border-bottom: 1px solid @style-separator !important;
+}
+
+.styles-filter-engaged {
+	background-color: fade(@global-selected, 50%) !important;
+}
+
+.filter-match {
+	background-color: @global-selected !important;
+	box-shadow: 0 0 0 1px @selection-border !important;
+	border-radius: 2px;
+}
+
+.toolbar-text {
+	color: @global-label !important;
+}
+
+:host-context(.styles-pane-toolbar) {
+	.toolbar-button:hover {
+		background-color: transparent !important;
+	}
+
+	.toolbar-state-off:hover .toolbar-text {
+		color: @glyph-hover !important;
+	}
+
+	.toolbar-state-on .toolbar-text {
+		color: @glyph-active !important;
+	}
+}
+
+// ".hov" and ".cls" slideout menu
+.styles-element-classes-pane,
+.styles-element-state-pane {
+	background-color: @global-toolbar !important;
+	border-bottom: 1px solid @global-divider !important;
+	color: @global-text !important;
+}
+
+.styles-element-classes-pane .new-class-input {
+	.input-styles();
+}
+
+// override to remove bg from filter button hovers
+.toolbar-toggled-gray button.toolbar-button.toolbar-state-on {
+	background-color: transparent !important;
+}
+
+// Style Section Headers
+.platform-fonts,
+.sidebar-separator {
+	background-color: @style-section !important;
+	color: @style-selector-text !important;
+	border-top: none !important;
+	border-bottom: none !important;
+
+	> span.monospace {
+		background: transparent !important;
+		border: none !important;
+	}
+}
+
+// Editing Styles
+// ==========================================================================
+
+// property name
+.text-prompt-root.text-prompt-editing ::content .webkit-css-property.text-prompt {
+	color: @css-property !important;
+}
+
+// selector
+.selector.being-edited {
+	color: @css-def !important;
+}
+
+.text-prompt-root.text-prompt-editing ::content .text-prompt {
+	color: @global-text !important;
+}
+
+// Metrics
+// ========================================================================== */
+
+.metrics {
+	color: @global-background !important;
+
+	.position,
+	.margin:not([style^="background-color"]),
+	.border:not([style^="background-color"]),
+	.padding:not([style^="background-color"]),
+	.margin:not([style^="background-color"]),
+	.content:not([style^="background-color"]) {
+		background-color: @style-metrics-background !important;
+	}
+}
+
+// Override table filter below metrics
+.style-panes-wrapper > div:not(:first-child) {
+	border-top: 1px solid @style-separator !important;
+}
+
+// Filter bar text
+.styles-sidebar-pane-filter-box > input {
+	.input-styles();
+}
+
+.property-value-text {
+	color: @global-text !important;
+}
+
+// Computed Properties
+:host(.computed-properties) .tree-outline li {
+	&:hover {
+		background-color: transparent !important;
+	}
+
+	&.odd-row {
+		background-color: @table-secondary !important;
+	}
+
+	.property-trace {
+		margin-top: 5px;
+	}
+
+	.trace-link {
+		color: @global-label;
+	}
+
+	.property-trace-inactive .property-trace-value {
+		opacity: 0.5 !important;
+
+		&::before {
+			border-color: @global-text;
+		}
+	}
+
+	.tree-outline ol.children.expanded {
+		margin-right: 5px;
+	}
+}
+
+// highlight selected style (not working??)
+.highlight-line-modification {
+	animation: source-line-modification-background-fadeout-revised 0.4s 0s;
+}
+
+// Event Listeners
+// ==========================================================================
+
+.view-container > .toolbar {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+.tree-element-title {
+	color: @global-text !important;
+}
+
+// Editable Media Query on Elements Panel
+// .styles-section-title .media-list.media-matches .media.editable-media,
+// .styles-section-title .media-list {
+// 	color: @- !important; .contrast(@global-text, 25%, invert);
+//
+// 	&.media-matches .media.editable-media .media-text {
+// 		color: @global-text !important;
+// 	}
+// }
+
+// Go to rule icon
+.property-value:hover,
+.property-trace-value:hover {
+	.goto-source-icon {
+		background-color: @glyph-active !important;
+	}
+}
+
+// // Buttons for Sidebar Options
+// .pin-toolbar-item.toggled-on,
+// .animation-toolbar-item.toggled-on {
+// 	background-color: rgba(0, 0, 0, 0);
+// }
+//
+// // Animation Controls
+// .styles-animations-controls-pane {
+// 	background: @- !important; .contrast(@global-background,6%);
+// 	color: @global-text !important;
+// 	border-bottom: 1px solid @style-separator !important;
+// }
+
+// // adjust position of animation slider
+// .styles-animations-controls-pane > * {
+// 	margin: 3px 4px !important;
+// }
+
+// // event listeners section borders
+// .event-listener-tree > li {
+// 	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) }
+// 	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) }
+// 	margin-top: 0 !important;
+// }
+//
+// .event-listener-tree .name {
+// 	color: @js-obj-name !important;
+// }
+//
+// Border for Event Listener filter
+.sidebar-pane > .toolbar {
+	border-bottom: 1px solid @style-separator !important;
+}
+
+// Sources - Call stack item
+.list-item:hover {
+	background-color: @global-hover !important;
+}
+
+// CSS that matches selected item
+.selector-matches {
+	color: @css-builtin !important;
+}
+
+// CSS Selector
+.webkit-css-property,
+.styles-section .properties > li .webkit-css-property {
+	color: @css-property !important;
+	font-weight: 400;
+}
+
+// Properties section
+// ==========================================================================
+.properties-widget-section {
+	border-top: 0;
+	border-bottom: 1px solid @global-divider;
+	margin-top: 0 !important;
+}
+
+.object-properties-section li {
+	color: @global-text !important;
+}
+
+// ==========================================================================
+// Accessibility Inspection (Experiments)
+// ==========================================================================
+
+div.ax-computed-name {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+.ax-name {
+	color: @js-obj-name !important;
+}
+
+.ax-role {
+	color: @global-text !important;
+}
+
+// ui for selected elements with no a11y exposed
+.ax-ignored-node-pane {
+	background-color: @-;
+	.contrast(@global-background, 5%) !important;
+}
+
+// Property rules in table view (styles)
+.property-trace-value,
+.property-trace-selector {
+	color: @global-text !important;
+}
+
+// ==========================================================================
+// Sidebar - Rendered Fonts
+// ==========================================================================
+
+// Fonts section header should be styled the same as ::shadow .sidebar-separator, but
+// there isn't a good selector hook for it. Attaching to parent class.
+.style-panes-wrapper .title {
+	background-color: @style-section !important;
+	color: @style-selector-text !important;
+	text-shadow: none !important;
+	border-top: none !important;
+	border-bottom: none !important;
+}
+
+.font-stats-item {
+	color: @global-text;
+
+	.font-usage {
+		color: @global-accent;
+	}
+}
+
+// ==========================================================================
+// Shadow Editor
+// ==========================================================================
+
+.shadow-editor-label {
+	color: @global-label !important;
+}
+
+.shadow-editor-button-left,
+.shadow-editor-button-right {
+	.button-styles();
+}
+
+.shadow-editor-text-input {
+	.input-styles();
+}
+
+// slider
+#thumb {
+	background-color: @global-accent !important;
+}
+
+// Event Listener Breakpoints
+.breakpoint-hit .breakpoint-hit-marker {
+	background: @global-selected !important;
+}
+
+// Darken side panel bg
+.panel-sidebar {
+	background-color: @global-background !important;
+}

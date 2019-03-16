@@ -1,0 +1,82 @@
+.toolbar-divider {
+	background-color: @toolbar-item-divider !important;
+}
+
+.toolbar-item {
+	color: @global-text !important;
+}
+
+// secondary toolbars
+:host-context(.panel.timeline),
+:host-context(.console-view) {
+	.toolbar-shadow {
+		background-color: @toolbar-sub !important;
+	}
+}
+
+.toolbar-shadow.floating {
+	background-color: @toolbar-sub !important;
+	border: 1px solid @form-button-border !important;
+}
+
+.toolbar-button.emulate-active {
+	background-color: transparent !important;
+}
+
+.tabbed-pane-tab-slider {
+	background-color: var(--accent-color) !important;
+	top: 0 !important;
+}
+
+.toolbar-input {
+	.input-styles();
+}
+
+// enable slider for dark theme
+:host-context(.-theme-with-dark-background) .tabbed-pane-tab-slider {
+	display: block !important;
+	height: 2px !important;
+}
+
+.tabbed-pane-header-tab {
+	color: @tab-label !important;
+
+	&:hover {
+		color: var(--tab-selected-fg-color) !important;
+	}
+
+	&.dragging {
+		background-color: @global-background !important;
+	}
+
+	&.selected {
+		background-color: transparent !important;
+	}
+
+	&.selected .tabbed-pane-header-tab-title {
+		color: @tab-label-selected !important;
+	}
+}
+
+// drop-down hook when viewport is short
+.tabbed-pane-header-tabs-drop-down-container {
+	background-color: transparent !important;
+
+	&:hover .chevron-icon {
+		background-color: @tab-label-selected !important;
+	}
+
+	.chevron-icon {
+		background-color: @tab-label !important;
+	}
+}
+
+.tabbed-pane-header {
+	border-bottom: 1px solid @toolbar-divider !important;
+}
+
+// glyphs
+:not(.toolbar-render-as-links) .toolbar-button:enabled:hover:not(:active) .toolbar-glyph,
+.toolbar-button.toolbar-state-on .toolbar-glyph {
+	background-color: @global-accent !important;
+}

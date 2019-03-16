@@ -1,0 +1,85 @@
+// ==========================================================================
+// Network
+// ==========================================================================
+
+.overview-grid-cursor-area {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+:host(.split-widget) .shadow-split-widget-sidebar {
+	border-left: 1px solid @global-divider !important;
+}
+
+.network-timing-table {
+	color: @global-text !important;
+}
+
+.network-timing-table-header td {
+	color: @global-label !important;
+}
+
+.network-waterfall-header {
+	border-bottom: 0 !important;
+
+	&:hover {
+		background-color: transparent !important;
+	}
+}
+
+:host(.request-headers-tree) .tree-outline .header-name {
+	color: @global-label !important;
+}
+
+:host-context(.network-item-view) {
+	.toolbar {
+		background-color: @toolbar-sub !important;
+		border-top: 1px solid @toolbar-divider !important;
+		border-bottom: 1px solid @toolbar-divider !important;
+	}
+}
+
+.panel.network {
+	.filter-bitset-filter {
+		li {
+			text-shadow: none !important;
+			color: @global-text !important;
+
+			&.selected {
+				color: @global-accent !important;
+				background-color: rgba(0, 0, 0, 0) !important;
+			}
+
+			&:hover {
+				color: @global-accent !important;
+				background-color: rgba(0, 0, 0, 0) !important;
+			}
+
+			&:hover:not(.selected) {
+				cursor: pointer !important;
+			}
+		}
+	}
+
+	.filter-bitset-filter-divider {
+		background-color: @toolbar-item-divider !important;
+	}
+
+	#network-overview-container {
+		border-bottom: 1px solid @global-divider !important;
+	}
+
+	.network-summary-bar {
+		border-top-color: @global-divider !important;
+		background-color: @toolbar-sub !important;
+		color: @global-text !important;
+	}
+
+	.network-log-grid.data-grid th {
+		border-bottom-color: @global-divider !important;
+	}
+
+	.network-status-pane {
+		background-color: @global-background !important;
+		color: @global-label !important;
+	}
+}

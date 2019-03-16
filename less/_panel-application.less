@@ -1,0 +1,27 @@
+// ==========================================================================
+// Application
+// ==========================================================================
+:host-context(.panel.resources .vbox) {
+	.widget.vbox {
+		background-color: @global-background !important;
+	}
+}
+
+.report-content-box {
+	background-color: @global-background !important;
+	color: @global-text !important;
+
+	.report-header,
+	.report-section {
+		border-bottom: 1px solid @global-divider !important;
+	}
+}
+
+.toolbar-render-as-links * {
+	color: @global-text !important;
+}
+
+.top-resources-toolbar {
+	border-bottom: none !important;
+	background: @toolbar-sub !important;
+}
