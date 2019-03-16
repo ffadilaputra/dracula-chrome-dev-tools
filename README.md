@@ -1,8 +1,8 @@
-# Dracula Chrome Dev Tools
+# ![](theme-extension/images/dracula-48.png) Dracula Chrome Dev Tools
 
-An assortment of Chrome Devtools themes that use the Zero Base Template.
+A dark theme for Devtools.
 
-## Color Palette
+## 🎨 Color Palette
 
 Palette      | Hex       | RGB           | HSL             | ![Color Picker Boxes](https://draculatheme.com/assets/img/color-boxes/eyedropper.png)
 ---          | ---       | ---           | ---             | ---
@@ -19,13 +19,17 @@ Purple       | `#bd93f9` | `189 147 249` | `265° 89% 78%`  | ![Purple Color](ht
 Red          | `#ff5555` | `255 85 85`   | `0° 100% 67%`   | ![Red Color](https://draculatheme.com/assets/img/color-boxes/red.png)
 Yellow       | `#f1fa8c` | `241 250 140` | `65° 92% 76%`   | ![Yellow Color](https://draculatheme.com/assets/img/color-boxes/yellow.png)
 
-# Alternatives
+# 👨🏻‍💻Alternatives
 
 Chrome now has an option to let you select different themes via Settings > Appearance > Theme: Light/Dark.
 
-## Additional Resources
+## 📝Additional Resources
 
 * Chrome DevTools theme forked from [Zero Base Themes](https://github.com/mauricecruz/zero-base-themes)
 * Inspired by [New Moon Theme](https://github.com/taniarascia/new-moon-chrome-devtools/)
 
 Blog post and screencast showing how to get up and running and create your own theme as well http://s10wen.com/blog/2014/03/12/chrome-dev-tools-theming-with-zero-base-themes/
+
+
+## 👨🏻‍🎨 Author
+* [Ivan Fadila Putra](https://github.com/ffadilaputra)
